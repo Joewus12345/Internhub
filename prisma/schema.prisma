@@ -44,8 +44,8 @@ model Internship {
   posted_by           String
   createdAt           DateTime              @default(now())
   title               String
-  requirements        String?
-  description         String
+  requirements        String?               @db.LongText
+  description         String                @db.LongText
   duration            String
   expected_applicants String?
   programme           String
