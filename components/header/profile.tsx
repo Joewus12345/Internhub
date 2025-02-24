@@ -21,7 +21,9 @@ export default function Profile({ name, id }: { name: string, id: string }) {
       >
         <div className="flex items-center">
           <Button className="h-full bg-white hover:bg-purple-300 py-[10px] text-xs text-neutral-400">
-            {name} <ChevronsUpDown size={15} />
+            <span className="block sm:hidden">{name.split(" ")[0]}</span>
+            <span className="hidden sm:block">{name}</span>
+            <ChevronsUpDown size={15} />
           </Button>
         </div>
       </DropdownMenuTrigger>
